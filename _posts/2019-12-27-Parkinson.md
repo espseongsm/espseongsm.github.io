@@ -29,7 +29,7 @@ Then, we will decide the number of folds for lasso and ridge respectively, tune 
 Of course, trade-off between time and misclassification error rate will be discussed because time represents the computational complexity. For example, 5 percentage of the error rate with 10 second is of course better than 4.8 percentage with 10 minutes. Variable importance will be considered in terms of the lasso and ridge regression.
 
 ## Data Correlation
-![Correlation Matrix](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/0.jpeg)
+![Correlation Matrix](0.jpeg)
 
 As shown above, similar acoustic features have strong positive correlations, which is close to one. For example, Mel frequency cepstral coefficients and their derivatives(MFCC and Delta) have strong correlations. However, different acoustic features are almost uncorrelated such as Mel frequency cepstral coefficients and Pitch period entropy(PPE). Surprisingly, Harmonic-to-noise ratios are highly, positively correlated with Mel frequency cepstral coefficients and their derivatives. Negative correlations are not recognized noticeably.
 
