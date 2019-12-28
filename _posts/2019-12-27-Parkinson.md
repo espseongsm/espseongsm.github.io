@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Parkinson Disease Diagnosis from Acoustic Features
+title: Machine Learning Projects
 tags: R Logistic lasso ridge CV Logistic_Regression LASSO_Regression Ridge_Regression Cross_Validation Parkinson Disease_Diagnosis UCI Acoustic_Features glmnet data analysis
 aside:
   toc: true
