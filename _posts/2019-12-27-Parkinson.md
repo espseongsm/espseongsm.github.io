@@ -10,4 +10,6 @@ mathjax: true
 mathjax_autoNumber: true
 ---
 # Parkinson Disease Diagnosis from Acoustic Features
-## [Machine Learning Analysis](https://drive.google.com/open?id=1hz_E2v8Ur1TC0z1JHg4fZ2bg-OG_F9W8)
+Used Algorithms: Logistic regression, LASSO logistic regression, and Ridge logistic regression
+[Analysis with Machine Learning](https://drive.google.com/open?id=1hz_E2v8Ur1TC0z1JHg4fZ2bg-OG_F9W8)
+[Code - R](https://drive.google.com/open?id=1KH9FjngsPXtv8BFuG1kuIMuzNKqZp8Rb)
