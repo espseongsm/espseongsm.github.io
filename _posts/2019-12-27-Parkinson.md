@@ -30,38 +30,38 @@ Then, we will decide the number of folds for lasso and ridge respectively, tune 
 
 Of course, trade-off between time and misclassification error rate will be discussed because time represents the computational complexity. For example, 5 percentage of the error rate with 10 second is of course better than 4.8 percentage with 10 minutes. Variable importance will be considered in terms of the lasso and ridge regression.
 
-## Variable Correlation
+## Correlation Analysis
 ![Correlation Matrix](https://drive.google.com/uc?export=view&id=1p7UlkpFY0jG4tMUdWRXg1f52ily99Tgu)
 
 As shown above, similar acoustic features have strong positive correlations, which is close to one. For example, Mel frequency cepstral coefficients and their derivatives(MFCC and Delta) have strong correlations. However, different acoustic features are almost uncorrelated such as Mel frequency cepstral coefficients and Pitch period entropy(PPE). Surprisingly, Harmonic-to-noise ratios are highly, positively correlated with Mel frequency cepstral coefficients and their derivatives. Negative correlations are not recognized noticeably.
 
 ## Model Building
 ### General Comparison between Logistic, LASSO, and Ridge
-![General Comparison](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/1.jpeg)
+![General Comparison](https://drive.google.com/uc?export=view&id=15LChS9VlQkOyC5kG1nGmWAHysBnQsI67)
 
 Each box plot in Figure 2 comes from 100 iterations for each algorithm. As shown in Figure 2, logsitic regression is overfitted because its train error rate is under 10 percentage at average while the test error rate is over 25 percentage. That is to say, the test error rate cannot be estimated by the train error rate because the train error rate is much better than the test error rate. Unlike the logistic regression, lasso and ridge regression are not overfitted since the train error rates are close to the test error rate even though the train error rates are worse than that of the logistic regression. The test error rate is computed using the hyperparameter which is chosen by the 10 folds cross validation.
 
 In general, 10 fold cross validation is commonly used in data analysis as used in this section. The cross validation error rate with 10 folds is also a good estimate of the test error rate for the lasso and ridge regression as we can see the similarity between the test error rate and the cross validation error rate in Figure 2. Therefore, figuring out what number of folds computes the best cross validation error rate is important in terms of estimating the test error rate of the lasso and ridge regression. We evaluate the number of folds in next sections.
 
 ### Optimal K Fold Cross Validation for LASSO Regression
-![Optimal K Fold Cross Validation for LASSO](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/2.jpeg)
+![Optimal K Fold Cross Validation for LASSO](https://drive.google.com/uc?export=view&id=1nPkG9GGcWC0c6GRSTcDgV_XVyTm3alUS)
 
 The error rates and time in the Figure 3 are the average of 100 iterations of lasso logistic regression. The minimum value is marked as a red point. As the number of folds increase, the cross validation misclassification error rate converges to 17.5 percentage as shown in Figure 3. Of course, Leave-One-Out(LOO) cross validation the best tunes the hyperparameter, $\lambda$, for the lasso regression; however, it takes way more time than other folds cross validation. For example, 50 folds cross validation takes less than 20 seconds, but LOO cross validation takes three times as much as the 50 folds cross validation takes. Considering the $n_{train} = 192$, it might be said that LOO cross validation has 192 folds. Even though the LOO cross validation spends much more time, it doesn't improve the misclassification error rate remarkably. 25 folds, 40 folds, and LOO cross validation show the similar error rates each other. So, 25 folds cross validation for the lasso regression is the best choice with respect to the trade-off between time and error rates. 
 
 ### Optimal K Fold Cross Validation for Ridge Regression
-![Optimal K Fold Cross Validation for Ridge](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/3.jpeg)
+![Optimal K Fold Cross Validation for Ridge](https://drive.google.com/uc?export=view&id=1LPMy6sct05g8S4q_5TnDixalHd-8TdCC)
 
 When comparing the cross validation error rates of 100 iterations, 10 fold cross validation is the best in the ridge regression in Figure 4. Interestingly, increasing the number of folds doesn't improve the cross validation error rate. We don't need to consider the time to run the cross validation because the LOO cross validation, which takes the longest time to run, takes only less than 10 seconds. 
 
 In this dataset, the ridge regression takes much shorter time to cross validate than does the lasso regression in general. For example, the LOO cross validation for the lasso regression spends more than 60 seconds, but that for the ridge regression spends less than 10 seconds. The different fold cross validation keeps this pattern in Figure 3 and Figure 4.
 
 ### Optimal Hyperparameters for LASSO and Ridge Regression
-![Optimal Hyperparameters](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/4.jpeg)
+![Optimal Hyperparameters](https://drive.google.com/uc?export=view&id=11Rjq5syRF70iNhBVI-Ka5BsK8Pyv7S5i)
 
 The best hyperparameter for the lasso regression is 0.0058, and that for the ridge regression is 0.1272. The lowest cross validation error rate is marked as a red dot in Figure 5. That lowest cross validation error rate gives us the optimal hyperparameters. As the hyperparameter increases, the cross validation misclassification error rate, which is a good estimate of the test error rate, becomes worse in the both cases as shown in Figure 5. The reason for that is all of variable coefficients approach to zero as the hyperparameter, $\lambda$, increases. If the hyperparameter is zero, the lasso and ridge regression is the same as the logistic regression. Of course, the range of $\lambda$ for the lasso regression is from zero to one, and that for the ridge regression is from zero to positive infinity. 
 
 ### Variable Importance
-![Variable Importance](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/5.jpeg)
+![Variable Importance](https://drive.google.com/uc?export=view&id=1IO9S1Ry-BGAWfZ-PpryfW7fmI0CuQ4Ow)
 
 Regarding the variable importance, there are similar patterns in Figure 6. The order of variables doesn't change in the x axis of Figure 6. Some variables with negative coefficients in the lasso regression tend to have negative coefficients in the ridge regression. Other variables with positive coefficients in the lasso regression also do. That is to say, the sign of variable coefficients keeps consistent in the lasso and ridge regression. However, the absolute value of variable coefficients is greater in the lasso regression than in the ridge regression. Of course, the lasso regression has zero coefficient variables, but the ridge regression doesn't. 
 
@@ -76,7 +76,7 @@ The harmonic-to-noise ratio in 0-3500 Hz has the most negative contribution to t
 In the ridge regression, the order of Top 3 important variables of negative coefficients changes. The repetitiveness of a voice signal is the most negative one and the harmonic-to-noise ratio is the second most negative. 
 
 ### Best Method between Logistic, LASSO, and Ridge Regression
-![Best Method](https://github.com/espseongsm/Parkinson_Disease_Diagnosis/blob/master/6.jpeg)
+![Best Method](https://drive.google.com/uc?export=view&id=1riIfjv4TtHU-Yzc0Ah_zxj9lZQYNUpwL)
 
 The best method for this dataset is the ridge logistic regression with $\lambda = 0.1272$ chosen by 10 fold cross validation because the ridge regression shows the lowest test error rate with the optimal lambda between the logistic, lasso, and ridge regression in Figure 7. In addition, the ridge regression is the least overfitted between three methods, implying that the train error rate is very close to the test error rate.
 
