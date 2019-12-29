@@ -67,21 +67,21 @@ Top 5 Positive and Negative Coefficient Variables in LASSO
 
 | Top 5     | Positive  | Top 5  | Negative | 
 |:--------- |----------:|:-------|---------:|
-| PPE       |       0.77| HNR35  |      -.93|
-| MFCC2     |       0.52| RPDE   |      -.85|
-| Shim_APQ5 |       0.44| MFCC10 |      -.69|
-| Jitter_rel|       0.41| Delta11|      -.50|
-| MFCC8     |       0.22| Delta3 |      -.34|
+| PPE       |       0.77| HNR35  |     -0.93|
+| MFCC2     |       0.52| RPDE   |     -0.85|
+| Shim_APQ5 |       0.44| MFCC10 |     -0.69|
+| Jitter_rel|       0.41| Delta11|     -0.50|
+| MFCC8     |       0.22| Delta3 |     -0.34|
 
 Top 5 Positive and Negative Coefficient Variables in Ridge  
 
 | Top 5     | Positive  | Top 5  | Negative | 
 |:--------- |----------:|:-------|---------:|
-| PPE       |       0.25| RPEDE  |      -.22|
-| MFCC2     |       0.18| HNR35  |      -.17|
-| Shim_APQ5 |       0.08| MFCC10 |      -.17|
-| Jitter_RAP|       0.07| Delta11|      -.17|
-| Shim_dB   |       0.06| HNR38  |      -.16|
+| PPE       |       0.25| RPEDE  |     -0.22|
+| MFCC2     |       0.18| HNR35  |     -0.17|
+| Shim_APQ5 |       0.08| MFCC10 |     -0.17|
+| Jitter_RAP|       0.07| Delta11|     -0.17|
+| Shim_dB   |       0.06| HNR38  |     -0.16|
 
 In the tables above, Top 3 are the same in the lasso and ridge regression regardless of the sign of the coefficients of variables. Top 3 important positive variables are PPE, MFCC2, and ShimAPQ5. PPE is a new measurement of pitch variation in voice. MFCC2 is the second coefficient of MFC, the mel-frequency cepstrum (MFC). MFC is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency. ShimAPQ5 is a measurement of perturbation to the small, rapid, cycle-to-cycle changes of period in the fundamental frequency of the voice and 5 point amplitude that occur during phonation. 
 
