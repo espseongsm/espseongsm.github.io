@@ -10,7 +10,7 @@ mathjax: true
 mathjax_autoNumber: true
 ---
 
-[PDF](https://drive.google.com/open?id=1hz_E2v8Ur1TC0z1JHg4fZ2bg-OG_F9W8)  
+[PDF Version](https://drive.google.com/open?id=1hz_E2v8Ur1TC0z1JHg4fZ2bg-OG_F9W8)  
 [R Code](https://drive.google.com/open?id=1KH9FjngsPXtv8BFuG1kuIMuzNKqZp8Rb)
 
 # Executive Summary
