@@ -10,7 +10,8 @@ mathjax: true
 mathjax_autoNumber: true
 ---
 
-[toc]
+[PDF](https://drive.google.com/open?id=1hz_E2v8Ur1TC0z1JHg4fZ2bg-OG_F9W8)
+[R Code](https://drive.google.com/open?id=1KH9FjngsPXtv8BFuG1kuIMuzNKqZp8Rb)
 
 # Executive Summary
 The Parkinson disease has so severe effects on patients and patients' families that early detection and intervention is needed. Acoustic features of patients are important in terms of predicting whether the patient has the Parkinson disease because it's not easy for patients to control their muscle. If we predict the outbreak of this disease with acoustic features, possible patients and their families would prepare for the disease in advance. In order to improve the prediction, we compare three classification methods, such as logistic regression, lasso logistic regression, and ridge logistic regression. The lasso and ridge logistic regression has a hyperparameter that controls the prediction ability, so we tune the hyperpameter optimally. In addition to the hyperparameter, we evaluate which acoustic feature has the most contribution to the Parkinson disease detection. From the best methods, we estimate the misclassification error rate for new patients. The lower misclassification error rate the better prediction.
