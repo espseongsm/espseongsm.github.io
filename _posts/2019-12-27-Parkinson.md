@@ -10,10 +10,6 @@ mathjax: true
 mathjax_autoNumber: true
 ---
 
-[toc]
-
-# Parkinson Disease Diagnosis from Acoustic Features
-
 Soonmo Seong (soonmo.seong@gmail.com)
 
 Dec 27th, 2019
