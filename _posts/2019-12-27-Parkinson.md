@@ -22,7 +22,7 @@ Dec 27th, 2019
 
 ## Executive Summary
 
-In order to improve the prediction, we compare three classification methods.
+In order to select the best classification method, we compare three methods in terms of misclassification error rate.
 
 - Logistic Regression
 - LASSO Logistic Regression
