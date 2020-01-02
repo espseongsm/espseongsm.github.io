@@ -10,9 +10,19 @@ mathjax: true
 mathjax_autoNumber: true
 ---
 
+[toc]
+
+# Parkinson Disease Diagnosis from Acoustic Features
+
 Soonmo Seong (soonmo.seong@gmail.com)
 
 Dec 27th, 2019
+
+[PDF](https://drive.google.com/open?id=1yRHq5az0IVvgjua4vYC9QhZMcF_5ndWl)
+
+[R Code](https://drive.google.com/open?id=1KH9FjngsPXtv8BFuG1kuIMuzNKqZp8Rb)
+
+[R Code PDF](https://drive.google.com/open?id=1hnQoRyjMFT54xps70zTOM7orCEPhdB0L)
 
 ## Executive Summary
 
@@ -149,5 +159,11 @@ As the dataset is balanced, the confusion matrix of the ridge regression is also
 The ridge logistic regression with $\lambda = 0.1272$ is the best method for this dataset since the ridge regression is not overfitted too much and has the best estimate of the true misclassification error rate. In other words, **the train error rate of 0.146 from the full dataset can be a good estimate for the true misclassification error rate when we face a new dataset**. For example, when we diagnose 100 new patients with this ridge logistic regression model, the misclassification error rate would be around 15 percentage. In addition to the prediction accuracy, this model doesn't spend too much time to cross validate and train the model because we already consider the trade-off between time and error rate. In particular, this dataset requires less than 5 second to cross validate with 10 folds. 
 
 We tune the hyperparameter, $\lambda$. When we tune the hyperparameter of the ridge logistic regression, we implement the cross validation method. However, we eclectically choose 10-fold cross validation. We compare 15 types of cross validation folds from 3 fold to LOO cross validation by taking the average of 100 iterations of cross validation error rates. Of 15 types of the folds, 10-fold cross validation is the best one that gives the best hyperparameter, $\lambda = 0.1272$.
+
+[PDF](https://drive.google.com/open?id=1yRHq5az0IVvgjua4vYC9QhZMcF_5ndWl)
+
+[R Code](https://drive.google.com/open?id=1KH9FjngsPXtv8BFuG1kuIMuzNKqZp8Rb)
+
+[R Code PDF](https://drive.google.com/open?id=1hnQoRyjMFT54xps70zTOM7orCEPhdB0L)
 
 <!--more-->
