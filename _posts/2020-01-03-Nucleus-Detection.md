@@ -9,6 +9,7 @@ sidebar:
 mathjax: true
 mathjax_autoNumber: true
 ---
+
 # Nucleus Detection in Cell
 
 Soonmo Seong (soonmo.seong@gmail.com)
