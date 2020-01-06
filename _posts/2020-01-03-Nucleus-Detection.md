@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Parkinson Disease Diagnosis from Acoustic Features
+title: Nucleus Detection in Cell(Image Classification)
 tags: R logistic lasso ridge random_forest RF SVM support_vector_machine CV Logistic_Regression LASSO_Regression Ridge_Regression Cross_Validation Nucleus Detect kaggle image classification glmnet data analysis
 aside:
   toc: true
@@ -9,18 +9,15 @@ sidebar:
 mathjax: true
 mathjax_autoNumber: true
 ---
-
-
-
 # Nucleus Detection in Cell
 
 Soonmo Seong (soonmo.seong@gmail.com)
 
 Jan 3rd, 2020
 
-[PDF]()
+[PDF](https://drive.google.com/open?id=1iybkj00lmuhgsGshC2U2xrCKo7obpWWR)
 
-[R Code]()
+[R Code](https://drive.google.com/open?id=1mSzBeKDjYWgE_lmkgLCyfMOiw356wTCK)
 
 ## 1. Executive Summary
 
@@ -97,7 +94,7 @@ Hyperparameters, $\lambda$ ,are tuned by cross validation for R-SVM, lasso, and 
 
 Regarding lasso and ridge regression, the minimum cross validation error rates are marked as a point for each size of train data. The hyperparameters with the minimum cross validation error rate are used. The x-axis is $\lVert\hat\beta_\lambda\rVert / \lVert \hat\beta_{\lambda=0} \rVert$, the ratio of L2 norm beta hat. When $\lambda = 0$, lasso and ridge regression becomes logistic regression, suggesting that $\lVert\hat\beta_\lambda\rVert / \lVert \hat\beta_{\lambda=0} \rVert = 1$. When $\lVert\hat\beta_\lambda\rVert / \lVert \hat\beta_{\lambda=0} \rVert = 0$, all the coefficients are zero, which maximize the cross validation error rates. In general, ridge regression is worse than lasso regression.
 
-$\gamma = 0.01$ and cost = 100 are selected for R-SVM because the cross validation error rate is the lowest at those values.
+$\gamma = 0.01$ and cost = 100 are selected for R-SVM because the cross validation error rate is the lowest at those values.
 
 ### 3.4 Trade Off Between Time and Performance
 
@@ -132,6 +129,6 @@ As $n_{learn}$ increase upto 90 percentage of n, time to cross-validate and to f
 
 The best method for this dataset is Random Forest in terms of test error rate and time. The larger $n_{learn}$ improves test error rates except for ridge regression. R-SVM is the worst method for this dataset
 
-[PDF]()
+[PDF](https://drive.google.com/open?id=1iybkj00lmuhgsGshC2U2xrCKo7obpWWR)
 
-[R Code](
+[R Code](https://drive.google.com/open?id=1mSzBeKDjYWgE_lmkgLCyfMOiw356wTCK)
