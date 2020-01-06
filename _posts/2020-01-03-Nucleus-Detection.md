@@ -1,15 +1,14 @@
 ---
-​---
 layout: article
-Title: Nucleus Detection in Cell
-author: Soonmo Seong
-date: Jan 5th, 2020
-​---
-
-
+title: Parkinson Disease Diagnosis from Acoustic Features
+tags: R logistic lasso ridge random_forest RF SVM support_vector_machine CV Logistic_Regression LASSO_Regression Ridge_Regression Cross_Validation Nucleus Detect kaggle image classification glmnet data analysis
+aside:
+  toc: true
+sidebar:
+  nav: layouts
+mathjax: true
+mathjax_autoNumber: true
 ---
-
-[toc]
 
 
 
