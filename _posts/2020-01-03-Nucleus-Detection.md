@@ -105,7 +105,7 @@ $\gamma = 0.01$ and cost = 100 are selected for R-SVM because the cross validati
 | SVM           | m = 1.4, p-value = 9e-14 < 0.05       |
 | Random Forest | m = 0.6, p-value = 2e-7 < 0.05        |
 
-As the size of train data increases from 0.5n to 0.9n, it takes time to cross validate and fit three times in [3.1](#3.1-$n_{learn} = 0.5n$ Performance Comparison) and [3.2](#3.2-$n_{learn} = 0.9n$ Performance Comparison). Test error rates are also improved except ridge regression because the p-value of two sample test is 0.14, which is greater than 0.05. In other words, we don't need to increase the size of train data from 0.5n to 0.9n if we use ridge logistic regression.
+As the size of train data increases from 0.5n to 0.9n, it takes time to cross validate and fit three times in [3.1](#3.1-$n_{learn} = 0.5n$-Performance-Comparison) and [3.2](#3.2-$n_{learn} = 0.9n$-Performance-Comparison). Test error rates are also improved except ridge regression because the p-value of two sample test is 0.14, which is greater than 0.05. In other words, we don't need to increase the size of train data from 0.5n to 0.9n if we use ridge logistic regression.
 
 ### 3.5 Variable Importance
 
